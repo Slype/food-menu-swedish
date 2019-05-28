@@ -1,0 +1,23 @@
+{
+  "short_name": "Matsedel",
+  "name": "Matsedel - Erikslund",
+  "lang": "sv",
+  "icons": [
+    {
+      "src": "chlav_256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+  },
+  {
+    "src": "chlav_512x512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }
+  ],
+  "start_url": "index.html",
+  "background_color": "#3d3d3d",
+  "display": "standalone",
+  "orientation":  "portrait",
+  "scope": "/food/",
+  "theme_color": "#3d3d3d"
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang=en dir=ltr>
+    <head>
+        <meta charset=utf-8>
+        <title>Matsedel - Erikslund</title>
+        <meta name=theme-color content=#e00000>
+        <meta name=viewport content="width=device-width, initial-scale=1.0">
+        <link rel=shortcut icon type=image/png href=https://slypeog.com/img/index_aboutme.png>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+        <link rel="manifest" href="manifest.json">
+    </head>
+    <body>
+        <h1>Matsedel</h1>
+
+        <div class="container">
+            <div class="days">
+                <div data-id="0" class="day" onclick="changeDay(this)"><b>Mån</b><p>24/5</p></div>
+                <div data-id="1" class="day" onclick="changeDay(this)"><b>Tis</b><p>24/5</p></div>
+                <div data-id="2" class="day" onclick="changeDay(this)"><b>Ons</b><p>24/5</p></div>
+                <div data-id="3" class="day" onclick="changeDay(this)"><b>Tor</b><p>24/5</p></div>
+                <div data-id="4" class="day" onclick="changeDay(this)"><b>Fre</b><p>24/5</p></div>
+                <div data-id="5" class="day" onclick="changeDay(this)"><b>Lör</b><p>24/5</p></div>
+                <div data-id="6" class="day" onclick="changeDay(this)"><b>Sön</b><p>24/5</p></div>
+            </div>
+            <div class="content">
+                <!--
+                <div class="row rowTitle">Lunch</div>
+                <div class="row">askdj alsdj lkaasd asd asd </div>
+                <div class="row">asd asldj alskdj laksjd aksd</div>
+                <div class="row rowTitle">Middag</div>
+                <div class="row">askdj alsdj lkaasd asd asd </div>
+                -->
+                <div class="row noFood">Could not retrieve any food data.</div>
+            </div>
+            <div class="weeks">
+                <div data-delta="-1" class="otherWeek" onclick="changeWeek(this)">Förra veckan</div>
+                <div id="currentWeek">24</div>
+                <div data-delta="1" class="otherWeek" onclick="changeWeek(this)">Nästa vecka</div>
+            </div>
+        </div>
+        <script src=index.js></script>
+    </body>
+</html>
