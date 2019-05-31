@@ -108,7 +108,7 @@ function updateDays(data, activeID, noDate = false){
         daysElem.children[i].className = activeID == i ? "day dayActive" : "day";
         daysElem.children[i].children[0].innerText = weekDays[i].name;
         daysElem.children[i].children[1].innerText = noDate ? "-" : formatDate(data[weekDays[i].id].date);
-        daysElem.children[i].children[2].style.diplay = data[weekDays[i].id].date == getToday() ? "flex" : "none";
+        daysElem.children[i].children[2].style.display = data[weekDays[i].id].date == getToday() ? "flex" : "none";
     }
 }
 
