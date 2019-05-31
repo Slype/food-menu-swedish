@@ -52,6 +52,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .day b, .day p {
@@ -83,6 +84,21 @@ h1 {
 
 .dayActive:hover {
     background-color: rgba(255, 255, 255, 0.15);
+}
+
+.today {
+    width: calc(100% + 2px);
+    height: 30px;
+    position: absolute;
+    top: -30px;
+    left: -1px;
+    border: 1px solid rgba(255, 255, 0, 0.7);
+    border-bottom: transparent;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    opacity: 0.95;
 }
 
 .content {

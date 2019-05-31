@@ -13,6 +13,7 @@ const settings = {
     lunchName: "Lunch",
     dinnerName: "Middag",
     noFoodMessage: "Kunde inte läsa in matsedeln.",
+    todayName: "Idag",
     weekDays: [
         {id: "mon", name: "Mån"},
         {id: "tue", name: "Tis"},
@@ -37,6 +38,11 @@ Date.prototype.getWeek = function(){
     }
     days += this.getDate();
     return Number.isInteger(days / 7) ? Math.ceil(days / 7) + 1 : Math.ceil(days / 7);
+}
+
+function getToday(){
+    let d = new Date();
+    return d.getFullYear() + "-" + (((1 + d.getMonth()) + "").toString().length < 2 ? "0" + (1 + d.getMonth()) : "" + (1 + d.getMonth())) + "-" + ((d.getDate() + "").toString().length < 2 ? "0" + d.getDate() : "" + d.getDate());
 }
 
 function formatDate(str){
@@ -103,6 +109,8 @@ function updateDays(data, activeID, noDate = false){
         daysElem.children[i].className = activeID == i ? "day dayActive" : "day";
         daysElem.children[i].children[0].innerText = weekDays[i].name;
         daysElem.children[i].children[1].innerText = noDate ? "-" : formatDate(data[weekDays[i].id].date);
+        daysElem.children[i].children[2].style.display = data[weekDays[i].id].date == getToday() ? "flex" : "none";
+        daysElem.children[i].children[2].innerText = settings.todayName;
     }
 }
 
