@@ -39,6 +39,11 @@ Date.prototype.getWeek = function(){
     return Number.isInteger(days / 7) ? Math.ceil(days / 7) + 1 : Math.ceil(days / 7);
 }
 
+function getToday(){
+    let d = new Date();
+    return d.getFullYear() + "-" + (((1 + d.getMonth()) + "").toString().length < 2 ? "0" + (1 + d.getMonth()) : "" + (1 + d.getMonth())) + "-" + ((d.getDate() + "").toString().length < 2 ? "0" + d.getDate() : "" + d.getDate());
+}
+
 function formatDate(str){
     let arr = str.split("-");
     if(arr.length != 3)
@@ -103,6 +108,7 @@ function updateDays(data, activeID, noDate = false){
         daysElem.children[i].className = activeID == i ? "day dayActive" : "day";
         daysElem.children[i].children[0].innerText = weekDays[i].name;
         daysElem.children[i].children[1].innerText = noDate ? "-" : formatDate(data[weekDays[i].id].date);
+        daysElem.children[i].children[2].style.diplay = data[weekDays[i].id].date == getToday() ? "flex" : "none";
     }
 }
 
