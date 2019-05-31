@@ -13,6 +13,7 @@ const settings = {
     lunchName: "Lunch",
     dinnerName: "Middag",
     noFoodMessage: "Kunde inte läsa in matsedeln.",
+    todayName: "Idag",
     weekDays: [
         {id: "mon", name: "Mån"},
         {id: "tue", name: "Tis"},
@@ -109,6 +110,7 @@ function updateDays(data, activeID, noDate = false){
         daysElem.children[i].children[0].innerText = weekDays[i].name;
         daysElem.children[i].children[1].innerText = noDate ? "-" : formatDate(data[weekDays[i].id].date);
         daysElem.children[i].children[2].style.display = data[weekDays[i].id].date == getToday() ? "flex" : "none";
+        daysElem.children[i].children[2].innerText = settings.todayName;
     }
 }
 
