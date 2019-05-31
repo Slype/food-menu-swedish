@@ -94,7 +94,7 @@ h1 {
     left: -1px;
     border: 1px solid rgba(255, 255, 0, 0.7);
     border-bottom: transparent;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     font-size: 14px;
